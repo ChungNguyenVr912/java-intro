@@ -6,29 +6,12 @@ public class DaysInMonth {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter month: ");
         int month = scanner.nextInt();
-        String daysInMonth;
-        switch (month){
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                daysInMonth = "31";
-                break;
-            case 2:
-                daysInMonth = "28 or 29";
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                daysInMonth = "30";
-                break;
-            default:
-                daysInMonth = "";
-        }
+        String daysInMonth = switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12 -> "31";
+            case 2 -> "28 or 29";
+            case 4, 6, 9, 11 -> "30";
+            default -> "";
+        };
         if(!daysInMonth.equals("")){
             System.out.printf("The month %d has %s days", month, daysInMonth);
         }else {
