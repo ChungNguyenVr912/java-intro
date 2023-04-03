@@ -12,7 +12,7 @@ public class LinearEquation {
         double y = scanner.nextDouble();
         if(a != 0){
             double answer = (y - b)/a;
-            System.out.println("Nghiem cua pt: x = " + answer);
+            System.out.printf("Nghiem cua pt: x = %f\n", answer);
         }else if(y == b){
             System.out.println("Phuong trinh dung voi moi gia tri cua x");
         }else {
